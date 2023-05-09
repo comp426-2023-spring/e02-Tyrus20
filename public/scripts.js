@@ -22,8 +22,7 @@ function selection() {
 
 async function play(shotType) {
   if (shotType == null || shotType == undefined) {
-        shotType = 'random';
-        
+        shotType = 'random';   
       }
   var baseurl = window.location.href.concat('app');
 
@@ -36,20 +35,7 @@ async function play(shotType) {
   var url = baseurl.concat('/play/');
 
   //if (!document.getElementById('random').checked) {
-  if (shotType != 'random') {
-      let shot = '';
-      if (document.getElementById('rock').checked)
-          shot = 'rock';
-      if (document.getElementById('paper').checked)
-          shot = 'paper';
-      if (document.getElementById('scissors').checked)
-          shot = 'scissors';
-      if (document.getElementById('lizard').checked)
-          shot = 'lizard';
-      if (document.getElementById('spock').checked)
-          shot = 'spock';
-
-      
+  if (shotType != 'random') {      
       url = url.concat(shotType);
       let response = await fetch(url);
       let result = await response.json();
