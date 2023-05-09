@@ -2,17 +2,69 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>RPSLS</title>
         <script src="scripts.js"></script>
-        <link rel="stylesheet" href="styles.css">
+        <link rel="styles" href="styles.css">
+        <title>Final Exam</title>
     </head>
     <body>
-        <h1>Rock Paper Scissors</h1>
-        <p>Choose your move:</p>
-        <button id="rock">Rock</button>
-        <button id="paper">Paper</button>
-        <button id="scissors">Scissors</button>
-        <p id="result"></p>
+        <div id="selection">
+            <input type="radio" name="game" id="rps" value="'rps" onclick="selection()">
+            <label for="rps">Rock Paper Scissors</label>
+            <br>
+            <input type="radio" name="game" id="rpsls" value="'rpsls" onclick="selection()">
+            <label for="rpsls">Rock Paper Scissors Lizard Spock</label>
+            <br>
+            <input type="radio" name="opp" id="rd" value="'rd" onclick="selection()">
+            <label for="rd">Random draw?</label>
+            <input type="radio" name="opp" id="opp" value="opp" onclick="selection()">
+            <label for="opp">Play against an opponent?</label>
 
+            <br>
+            <br>
+            <div id="rpsShots" hidden>
+                <input type="radio" name="shot" id="rock" value="rock">
+                <label for="rps">Rock</label>
+                <input type="radio" name="shot" id="paper" value="paper">
+                <label for="rps">Paper</label>
+                <input type="radio" name="shot" id="scissors" value="scissors">
+                <label for="rps">Scissors</label>
+            </div>
+
+            <div id="rpslsShots" hidden>
+                <input type="radio" name="shot" id="lizard" value="lizard">
+                <label for="rps">Lizard</label>
+                <input type="radio" name="shot" id="spock" value="spock">
+                <label for="rps">Spock</label>
+            </div>
+        </div>
+        <div id="results" hidden></div>
+        <br>
+        <br>
+        <div id="buttons">
+            <button type="button" id="play" onclick="play()">PLAY</button>
+            <button type="button" id="reset" onclick="reset()">RESET</button>
+            <button type="button" id="rules" onclick="rules()">RULES</button>
+        </div>
+        <div id="rulesText" hidden>
+            <h3>Rules for Rock Paper Scissors:</h3>
+            <ul>
+                <li>Scissors CUTS Paper</li>
+                <li>Paper COVERS Rock</li>
+                <li>Rock CRUSHES Scissors</li>
+            </ul>
+            <h3>Rules for the Lizard-Spock Expansion of Rock Paper Scissors:</h3>
+            <ul>
+                <li>Scissors CUTS Paper</li>
+                <li>Paper COVERS Rock</li>
+                <li>Rock SMOOSHES Lizard</li>
+                <li>Lizard POISONS Spock</li>
+                <li>Spock SMASHES Scissors</li>
+                <li>Scissors DECAPITATES Lizard</li>
+                <li>Lizard EATS Paper</li>
+                <li>Paper DISPROVES Spock</li>
+                <li>Spock VAPORIZES Rock</li>
+                <li>Rock CRUSHES Scissors</li>
+            </ul>
+        </div>
     </body>
 </html>
