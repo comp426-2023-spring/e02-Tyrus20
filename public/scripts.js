@@ -5,20 +5,17 @@
 function selection() {
   var rpsls = document.getElementById('rpsls');
 
-  var opp = document.getElementById('opp');
+  var opponent = document.getElementById('opponent');
 
-  if (opp.checked) {
-      document.getElementById('rpsShots').style.display = "block";
-      if (rpsls.checked)
-      {
-          document.getElementById('rpslsShots').style.display = "block";
-      }
-      else {
-          document.getElementById('rpslsShots').style.display = "none";
-      }
-  }
-  else {
-      document.getElementById('rpsShots').style.display = "none";
+  if (opponent.checked) {
+    document.getElementById('rpsShots').style.display = "block";
+    if (rpsls.checked) {
+        document.getElementById('rpslsShots').style.display = "block";
+    } else {
+        document.getElementById('rpslsShots').style.display = "none";
+    }
+  } else {
+    document.getElementById('rpsShots').style.display = "none";
   }
 }
 
@@ -34,7 +31,7 @@ async function play() {
 
   var url = baseurl.concat('/play/');
 
-  if (!document.getElementById('rd').checked) {
+  if (!document.getElementById('random').checked) {
       let shot = '';
       if (document.getElementById('rock').checked)
           shot = 'rock';
@@ -73,7 +70,7 @@ function reset() {
   document.getElementById('rulesText').style.display = "none";
   
   document.getElementById("rps").checked = true;
-  document.getElementById("rd").checked = true;
+  document.getElementById("random").checked = true;
   document.getElementById('rpslsShots').style.display = "none";
   document.getElementById('rpsShots').style.display = "none";
 }
