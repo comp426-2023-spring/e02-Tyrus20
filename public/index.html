@@ -8,15 +8,12 @@
     </head>
     <body>
         <div id="selection">
-            <input type="radio" name="game" id="rps" value="'rps" onclick="selection()">
-            <label for="rps">Rock Paper Scissors</label>
-            <br>
-            <input type="radio" name="game" id="rpsls" value="'rpsls" onclick="selection()">
-            <label for="rpsls">Rock Paper Scissors Lizard Spock</label>
+            <input type="checkbox" name="game" id="rpsls" value="'rpsls" onclick="selection()">
+            <label for="rpsls">Would you like to play the Lizard-Spock Expansion of Rock Paper Scissors?</label>
             <br>
             <input type="radio" name="opponent" id="random" value="random" onclick="selection()">
             <label for="random">Random draw?</label>
-            <input type="radio" name="opponent" id="opponent" value="opponent" onclick="selection()">
+            <input type="range" name="opponent" id="opponent" value="opponent" onclick="selection()">
             <label for="opponent">Play against an opponent?</label>
 
             <br>

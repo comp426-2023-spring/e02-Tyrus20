@@ -19,7 +19,6 @@ function selection() {
   }
 }
 
-// Logic for game play with requests to api
 async function play() {
   var baseurl = window.location.href.concat('app');
 
