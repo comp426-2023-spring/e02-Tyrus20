@@ -4,33 +4,36 @@
         <meta charset="UTF-8">
         <script src="scripts.js"></script>
         <link rel="styles" href="styles.css">
-        <title>Final Exam</title>
+        <title>e02 Final Exam</title>
     </head>
     <body>
         <div id="selection">
+            <label>Rock Paper Scissors!</label>
+            <br><br>
+            <input type="checkbox" name="opponent" id="opponent" value="opponent" onclick="selection()">
+            <label for="opponent">Would you like to play against an opponent?</label>
+
+            <br><br>
             <input type="checkbox" name="game" id="rpsls" value="'rpsls" onclick="selection()">
             <label for="rpsls">Would you like to play the Lizard-Spock Expansion of Rock Paper Scissors?</label>
             <br>
-            <input type="radio" name="opponent" id="random" value="random" onclick="selection()">
-            <label for="random">Random draw?</label>
-            <input type="range" name="opponent" id="opponent" value="opponent" onclick="selection()">
-            <label for="opponent">Play against an opponent?</label>
-
-            <br>
-            <br>
+            <!--<input type="radio" name="opponent" id="random" value="random" onclick="selection()">
+            <label for="random">Random draw?</label>-->
+            
+            <br><br>
             <div id="rpsShots" hidden>
-                <input type="radio" name="shot" id="rock" value="rock">
+                <input type="image" name="shot" id="rock" value="rock" src="./img/rock.jpg" height="200" width="200" onclick="play('rock')">
                 <label for="rps">Rock</label>
-                <input type="radio" name="shot" id="paper" value="paper">
+                <input type="image" name="shot" id="paper" value="paper" src="./img/paper.jpg" height="200" width="200" onclick="play('paper')">
                 <label for="rps">Paper</label>
-                <input type="radio" name="shot" id="scissors" value="scissors">
+                <input type="image" name="shot" id="scissors" value="scissors" src="./img/scissors.jpg" height="200" width="200" onclick="play('scissors')">
                 <label for="rps">Scissors</label>
             </div>
 
             <div id="rpslsShots" hidden>
-                <input type="radio" name="shot" id="lizard" value="lizard">
+                <input type="image" name="shot" id="lizard" value="lizard" src="./img/lizard.jpg" height="200" width="200" onclick="play('lizard')">
                 <label for="rps">Lizard</label>
-                <input type="radio" name="shot" id="spock" value="spock">
+                <input type="image" name="shot" id="spock" value="spock" src="./img/spock.jpg" height="200" width="200" onclick="play('spock')">
                 <label for="rps">Spock</label>
             </div>
         </div>

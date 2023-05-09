@@ -16,10 +16,15 @@ function selection() {
     }
   } else {
     document.getElementById('rpsShots').style.display = "none";
-  }
+    document.getElementById('rpslsShots').style.display = "none";
+  }  
 }
 
-async function play() {
+async function play(shotType) {
+  if (shotType == null || shotType == undefined) {
+        shotType = 'random';
+        
+      }
   var baseurl = window.location.href.concat('app');
 
   if (document.getElementById('rpsls').checked) {
@@ -30,7 +35,8 @@ async function play() {
 
   var url = baseurl.concat('/play/');
 
-  if (!document.getElementById('random').checked) {
+  //if (!document.getElementById('random').checked) {
+  if (shotType != 'random') {
       let shot = '';
       if (document.getElementById('rock').checked)
           shot = 'rock';
@@ -43,7 +49,8 @@ async function play() {
       if (document.getElementById('spock').checked)
           shot = 'spock';
 
-      url = url.concat(shot);
+      
+      url = url.concat(shotType);
       let response = await fetch(url);
       let result = await response.json();
       let output = 'You chose ' + result.player + '! ' + 'Opponent chose ' + result.opponent + '! You ' + result.result + '!';

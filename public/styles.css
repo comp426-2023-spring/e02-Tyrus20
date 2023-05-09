@@ -1,8 +1,4 @@
-body {
-}
-
-h1 {
-}
-
-p {
+.rock {
+  width: 80px;
+  height: 20px;
 }
