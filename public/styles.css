@@ -1,4 +1,10 @@
-.rock {
-  width: 80px;
-  height: 20px;
+body {
+  background-color: darkorange;
+  color: white;
+  font-size: large;
 }
+/*
+button {
+  height: 100px;
+  width: 100px;
+}*/
